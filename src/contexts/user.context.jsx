@@ -15,7 +15,6 @@ export const USER_ACTION_TYPES = {
 };
 
 const userReducer = (state, action) => {
-  console.log('dispatched');
   console.log(action);
   const { type, payload } = action;
 
@@ -39,8 +38,6 @@ export const UserContextProvider = ({ children }) => {
   //2 args for useReucer: first is reducer to use, second is initial value of state
 
   const { currentUser } = state;
-
-  console.log('currentUser', currentUser);
 
   const setCurrentUser = (user) => {
     dispatch({
